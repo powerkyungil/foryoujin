@@ -4,12 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <title>yujin</title>
 </head>
+<script>
+    $(document).ready(function () {
+        function getRamdom() {
+            return Math.floor(Math.random() * 3);
+        }
+
+        $('#babogame').click(function () {
+            var num = getRamdom();
+            if (num == 0) {
+                $('#baboresult').text("바보 맞아요💜");
+            } else if (num == 1) {
+                $('#baboresult').text("바보 아니에요💜");
+            } else {
+                $('#baboresult').text("경일이가 바보였네요,,");
+            }
+        })
+    })
+</script>
 
 <body>
     <h1>유진이💜 바보아니래요</h1>
     <p>아니라네요~~~~</p>
+    <button type="button" id="babogame">과연 바보인가 아닌가</button>
+    <p id="baboresult"></p>
 </body>
 
 </html>
