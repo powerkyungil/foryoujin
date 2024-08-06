@@ -15,13 +15,7 @@
 
         $('#babogame').click(function () {
             var num = getRamdom();
-            if (num == 0) {
-                $('#baboresult').text("바보 맞아요💜");
-            } else if (num == 1) {
-                $('#baboresult').text("바보 아니에요💜");
-            } else {
-                $('#baboresult').text("경일이가 바보였네요,,");
-            }
+            $('#food').attr('src', 'asset/iamges/food_' + num + '.jpeg');
         })
     })
 </script>
@@ -29,8 +23,8 @@
 <body>
     <h1>유진이💜 바보아니래요</h1>
     <p>아니라네요~~~~</p>
-    <button type="button" id="babogame">과연 바보인가 아닌가</button>
-    <p id="baboresult"></p>
+    <button type="button" id="babogame">추억 음식 같이볼랭?</button>
+    <img id="food" src="" alt="랜덤 이미지">
 </body>
 
 </html>
